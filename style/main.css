@@ -1,0 +1,83 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #0c122c;
+}
+
+.main-container {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 750px;
+  color: #fffeff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.data-storage {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.data-storage .data-storage-functions {
+  background-color: #1e2c69;
+  width: 350px;
+  height: 200px;
+  border-radius: 15px 90px 15px 15px;
+  -webkit-box-shadow: 1px 10px 5px #101b39;
+          box-shadow: 1px 10px 5px #101b39;
+}
+
+.data-storage .data-storage-data {
+  margin-left: 25px;
+  background-color: #1e2c69;
+  width: 540px;
+  height: 158px;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 10px 5px #101b39;
+          box-shadow: 1px 10px 5px #101b39;
+}
+
+.background {
+  width: 100%;
+  height: 420px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("../images/bg-desktop.png");
+  background-repeat: no-repeat;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=main.css.map */
