@@ -4,8 +4,13 @@
   "description": "this is a project that shows the data storage ui",
   "main": "index.js",
   "scripts": {
+    "start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js' --directory --port 7777 --browser 'Chrome' ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lin Zhang",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "nodemon": "^2.0.4"
+  }
 }
