@@ -51,6 +51,44 @@ body {
           box-shadow: 1px 10px 5px #101b39;
 }
 
+.data-storage .data-storage-functions .logo {
+  margin: 40px 0 20px 35px;
+  font-size: 2em;
+  text-align: left;
+}
+
+.data-storage .data-storage-functions .func-icons {
+  padding: 0;
+  width: 500px;
+  text-decoration: none;
+  text-align: left;
+  margin-left: 35px;
+}
+
+.data-storage .data-storage-functions .icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  display: inline-block;
+  background-color: #0b1129;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  cursor: pointer;
+}
+
+.data-storage .data-storage-functions #file-icon {
+  background-image: url("../images/icon-document.svg");
+}
+
+.data-storage .data-storage-functions #folder-icon {
+  background-image: url("../images/icon-folder.svg");
+}
+
+.data-storage .data-storage-functions #upload-icon {
+  background-image: url("../images/icon-upload.svg");
+}
+
 .data-storage .data-storage-data {
   margin-left: 25px;
   background-color: #1e2c69;

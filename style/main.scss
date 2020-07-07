@@ -1,4 +1,5 @@
 $bgcolor: #0c122c;
+$icon-bgcolor: #0b1129;
 $data-storage-bgcolor: #1e2c69;
 $data-storage-shadow: #101b39;
 body{
@@ -7,7 +8,6 @@ body{
     margin: 0;
     background-color: $bgcolor;
 }
-
 // .main-container{
 //     box-sizing: content-box;
 //     position: relative;
@@ -40,6 +40,41 @@ body{
         height: 200px;
         border-radius: 15px 90px 15px 15px;
         box-shadow: 1px 10px 5px $data-storage-shadow;
+
+        .logo{
+            margin: 40px 0 20px 35px;
+            font-size: 2em;
+            text-align: left;
+        }
+        .func-icons{
+            padding: 0;
+            width: 500px;
+            text-decoration: none;
+            text-align: left;
+            margin-left: 35px;
+        }
+                    
+        .icon{
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            display: inline-block;
+            background-color: $icon-bgcolor;
+            border-radius: 10px;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            cursor: pointer;
+        }
+        #file-icon{
+            background-image: url('../images/icon-document.svg');
+        }
+        #folder-icon{
+            background-image: url('../images/icon-folder.svg');
+        }
+        #upload-icon{
+            background-image: url('../images/icon-upload.svg');
+        }
+
     }
 
     .data-storage-data{
