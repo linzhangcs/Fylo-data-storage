@@ -16,7 +16,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
+  text-align: left;
   width: 100%;
   height: 750px;
   color: #fffeff;
@@ -25,8 +25,12 @@ body {
           justify-content: center;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .data-storage {
-  margin: 0 auto;
+  margin: 0 auto 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,9 +38,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -54,14 +55,12 @@ body {
 .data-storage .data-storage-functions .logo {
   margin: 40px 0 20px 35px;
   font-size: 2em;
-  text-align: left;
 }
 
 .data-storage .data-storage-functions .func-icons {
   padding: 0;
   width: 500px;
   text-decoration: none;
-  text-align: left;
   margin-left: 35px;
 }
 
@@ -94,9 +93,62 @@ body {
   background-color: #1e2c69;
   width: 540px;
   height: 158px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 35px;
   border-radius: 15px;
   -webkit-box-shadow: 1px 10px 5px #101b39;
           box-shadow: 1px 10px 5px #101b39;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.data-storage .data-storage-data .data-usage-bar {
+  width: 460px;
+  height: 15px;
+  border-radius: 12px;
+  background-color: #151e49;
+  margin: 15px 0 8px;
+}
+
+.data-storage .data-storage-data .data-usage-bar .data-usage-used {
+  width: 350px;
+  height: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: #151e49 2px solid;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#ff9c8e), to(#fb4d92));
+  background: linear-gradient(90deg, #ff9c8e 0%, #fb4d92 100%);
+  position: relative;
+  margin-top: 10px;
+}
+
+.data-storage .data-storage-data .data-usage-bar .usage-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: #fffeff;
+  position: absolute;
+  right: 2px;
+  top: 1px;
+}
+
+.data-storage .data-storage-data .usage-data-label {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .background {
@@ -111,8 +163,10 @@ body {
 }
 
 .attribution {
+  width: 900px;
+  margin: 0 auto;
   font-size: 11px;
-  text-align: center;
+  text-align: right;
 }
 
 .attribution a {
