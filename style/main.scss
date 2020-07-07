@@ -30,7 +30,7 @@ body{
     flex-direction: column;
     text-align: left;
     width: 100%;
-    height: 800px;
+    height: 100vh;
     color: $white;
     justify-content: center;
 }
@@ -48,8 +48,8 @@ body{
     .data-storage-functions{
         background-color: $data-storage-bgcolor;
         width: 350px;
-        height: 200px;
-        border-radius: 15px 90px 15px 15px;
+        height: 220px;
+        border-radius: 12px 90px 12px 12px;
         box-shadow: 1px 10px 5px $data-storage-shadow;
 
         .logo{
@@ -107,10 +107,10 @@ body{
             top: -50px;
             width: 180px;
             height: 72px;
-            border-radius:  12px 12px 0 12px;
+            border-radius:  12px;
             background-color: $white;
             color: $tooltip-data-color;
-            font-size: 3em;
+            font-size: 4em;
             font-weight: 700;
             text-align: center;
             display: flex;
@@ -141,12 +141,13 @@ body{
 
         .data-usage-bar{
             height: 15px;
+            width: 100%;
             border-radius: 12px;
             background-color: $databar-bgcolor;
             margin: 15px 0 8px;
 
             .data-usage-used{
-                width: 360px;
+                width: 82%;
                 height: 12px;
                 // box-sizing: border-box;
                 border: $databar-bgcolor 2px solid;
@@ -156,13 +157,13 @@ body{
                 margin-top: 10px;
             }
             .usage-dot{
-                width: 8px;
-                height: 8px;
+                width: 9px;
+                height: 9px;
                 border-radius: 10px;
                 background-color: $white;
                 position: absolute;
                 right: 2px;
-                top: 2px;
+                top: 1px;
             }
         }
 
@@ -185,7 +186,7 @@ body{
     bottom:0;
     z-index: -1;
     background-image: url("../images/bg-desktop.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
 }
 .attribution{
     width: 900px;
@@ -196,3 +197,38 @@ body{
         color: hsl(228, 45%, 44%);
     }
 }
+
+@media all and (min-width:0px) and (max-width: 375px) {
+    .main-container{
+        align-items: center;
+    }
+    .background{
+        height: 100vh;
+        top: 0;
+        background-image: url("../images/bg-mobile.png");
+        background-repeat: repeat-y;
+    }
+    .data-storage{
+        flex-direction: column;
+        align-items: flex-start;
+
+        .data-storage-functions{
+            width: 330px;
+            margin: 0 20px;
+        }
+        .data-storage-data{
+            margin: 10px 20px 0;
+            width: 330px;
+            text-align: center;
+            
+            .data-usage-tooltip{
+                top: 130px;
+                right: 75px;
+            }
+            #tooltip{
+                display: none;
+    
+            }
+        }
+    }
+  }
