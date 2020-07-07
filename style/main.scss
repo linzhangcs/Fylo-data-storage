@@ -1,5 +1,7 @@
 $white: #fffeff;
 $bgcolor: #0c122c;
+$tooltip-data-color: #111636;
+$tooltip-text-color: #a6a7ac;
 $icon-bgcolor: #0b1129;
 $databar-bgcolor: #151e49;
 $data-storage-bgcolor: #1e2c69;
@@ -22,7 +24,7 @@ body{
 //     color: #fffeff;
 // }
 .main-container{
-    box-sizing: content-box;
+    box-sizing: border-box;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -53,6 +55,7 @@ body{
         .logo{
             margin: 40px 0 20px 35px;
             font-size: 2em;
+            cursor: pointer;
         }
 
         .func-icons{
@@ -96,18 +99,56 @@ body{
         box-shadow: 1px 10px 5px $data-storage-shadow;
         font-size: 11px;
         letter-spacing: 0.5px;
+        position: relative;
+
+        .data-usage-tooltip{
+            position: absolute;
+            right: 35px;
+            top: -50px;
+            width: 180px;
+            height: 72px;
+            border-radius:  12px 12px 0 12px;
+            background-color: $white;
+            color: $tooltip-data-color;
+            font-size: 3em;
+            font-weight: 700;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .captialized{
+                text-transform: uppercase;
+                color: $tooltip-text-color;
+                vertical-align: middle;
+                line-height: normal;
+                font-size: 11px;
+            }
+
+            #tooltip{
+                
+                width: 0px;
+                height: 0px;
+                border-right: 22px solid $white;
+                border-top: 22px solid transparent;
+                border-bottom: 22px solid transparent;
+
+                position: absolute;
+                top: 50px;
+                right: 0;
+            }
+        }
 
         .data-usage-bar{
-            width: 460px;
             height: 15px;
             border-radius: 12px;
             background-color: $databar-bgcolor;
             margin: 15px 0 8px;
 
             .data-usage-used{
-                width: 350px;
-                height: 15px;
-                box-sizing: border-box;
+                width: 360px;
+                height: 12px;
+                // box-sizing: border-box;
                 border: $databar-bgcolor 2px solid;
                 border-radius: 10px;
                 background: linear-gradient(90deg, $data-usage-bar-start 0%, $data-usage-bar-end 100%);
@@ -121,12 +162,12 @@ body{
                 background-color: $white;
                 position: absolute;
                 right: 2px;
-                top: 1px;
+                top: 2px;
             }
         }
 
         .usage-data-label{
-            box-sizing: border-box;
+            // box-sizing: border-box;
             width: 100%;
             padding-right: 10px;
             display: flex;
